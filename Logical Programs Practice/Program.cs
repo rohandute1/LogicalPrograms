@@ -12,7 +12,7 @@ namespace Logical_Programs_Practice
         {
             Console.WriteLine("Welcome to Logical programs");
             Console.WriteLine("Please chose the option given below: ");
-            Console.WriteLine(" 1.Fibonacci series\n 2.Perfect number\n 3.Prime number checker");
+            Console.WriteLine(" 1.Fibonacci series\n 2.Perfect number\n 3.Prime number checker\n 4.Number Reversing");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -31,7 +31,12 @@ namespace Logical_Programs_Practice
                     Console.WriteLine("Enter a number: ");
                     int number = Convert.ToInt32(Console.ReadLine());
                     PrimeNumber.PrimeNumberChecker(number);
+                    break;
 
+                case 4:
+                    Console.WriteLine("Enter a number: ");
+                    int X = Convert.ToInt32(Console.ReadLine());
+                    ReverseNumber.Main(X);
                     break;
             }
                
