@@ -8,6 +8,26 @@ namespace Logical_Programs_Practice
 {
     internal class PrimeNumber
     {
+        public static bool IsPrimeNumber(int number)
+        {
+            if (number <= 1)
+            {
+                return false;
+            }
+            if (number == 2)
+            {
+                return true;
+            }
+
+            for (int i = 2; i <= Math.Sqrt(number); i++)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         public static void PrimeNumberChecker(int number) 
         {
             
@@ -24,25 +44,6 @@ namespace Logical_Programs_Practice
             }
             Console.ReadLine();
         }
-        public static bool IsPrimeNumber( int number )
-        {
-            if ( number <= 1 )
-            {
-                return false;
-            }
-            if ( number == 2 ) 
-            {
-                return true;
-            }
-
-            for (int i = 2; i <= Math.Sqrt(number); i++)
-            {
-                if (number % i == 0)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
+        
     }
 }
