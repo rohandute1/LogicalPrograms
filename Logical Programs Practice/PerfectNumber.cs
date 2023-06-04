@@ -8,6 +8,18 @@ namespace Logical_Programs_Practice
 {
     internal class PerfectNumber
     {
+        public static bool IsPerfectNumber(int number)
+        {
+            int sum = 0;
+            for (int i = 1; i < number; i++)
+            {
+                if (number % i == 0)
+                {
+                    sum += i;
+                }
+            }
+            return sum == number;
+        }
         public static void CheckingPerfectNumber(int n)
         {
 
@@ -23,18 +35,7 @@ namespace Logical_Programs_Practice
             }
             Console.ReadLine();
         }
-        public static bool IsPerfectNumber(int number) 
-        {
-            int sum = 0;
-            for (int i = 1; i < number; i++) 
-            {
-                if (number % i == 0) 
-                {
-                    sum += i;
-                }
-            }
-            return sum == number;
-        }    
+       
 
     }
 }

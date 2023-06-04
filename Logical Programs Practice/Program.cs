@@ -8,11 +8,11 @@ namespace Logical_Programs_Practice
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Welcome to Logical programs");
             Console.WriteLine("Please chose the option given below: ");
-            Console.WriteLine(" 1.Fibonacci series\n 2.Perfect number\n 3.Prime number checker\n 4.Number Reversing");
+            Console.WriteLine(" 1.Fibonacci series\n 2.Perfect number\n 3.Prime number checker\n 4.Number Reversing\n 5.Coupon Number");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -38,10 +38,12 @@ namespace Logical_Programs_Practice
                     int X = Convert.ToInt32(Console.ReadLine());
                     ReverseNumber.Main(X);
                     break;
+                case 5:
+                    int coupon = 10; // Number of distinct coupon numbers
+                    int totalRandomNumbers = CouponNumbers.GenerateDistinctCoupons(coupon);
+                    Console.WriteLine($"Total random numbers needed to have all distinct numbers: {totalRandomNumbers}");
+                    break;
             }
-               
-
-            
             Console.ReadLine();
         }
     }

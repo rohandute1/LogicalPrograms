@@ -44,6 +44,6 @@ namespace Logical_Programs_Practice
             }
             Console.ReadLine();
         }
-        
+       
     }
 }

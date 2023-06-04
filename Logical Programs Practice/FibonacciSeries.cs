@@ -13,6 +13,13 @@ namespace Logical_Programs_Practice
             Console.WriteLine("Fibonacci Series");
             int numb1 = 0, numb2 = 1, sum = 0;
             Console.WriteLine("Printing Fibonoccie Series");
+            for (int i = 3; i <= n; i++)
+            {
+                sum = numb1 + numb2;
+                Console.Write(" {0}", sum);
+                numb1 = numb2;
+                numb2 = sum;
+            }
             if (n == 1)
             {
                 Console.Write("{0} ", numb1);
@@ -25,13 +32,7 @@ namespace Logical_Programs_Practice
             {
                 //Console.Write(numb1+" "+numb2); (this is the alternate method for line no 15)
                 Console.Write("{0} {1}", numb1, numb2);
-                for (int i = 3; i <= n; i++)
-                {
-                    sum = numb1 + numb2;
-                    Console.Write(" {0}", sum);
-                    numb1 = numb2;
-                    numb2 = sum;
-                }
+                
             }
         }
     }
