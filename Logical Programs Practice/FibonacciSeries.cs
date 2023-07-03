@@ -23,7 +23,6 @@ namespace Logical_Programs_Practice
             }
             else
             {
-                //Console.Write(numb1+" "+numb2); (this is the alternate method for line no 15)
                 Console.Write("{0} {1}", numb1, numb2);
                 for (int i = 3; i <= n; i++)
                 {
